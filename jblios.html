@@ -1,15 +1,48 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>TestFlight to GitHub</title>
+<title>TestFlight to Aliyun</title>
 </head>
 <body bgcolor="white" text="black">
 <center>
-    <h1>金百灵 iOS</h1>
-    <h3>( 更新时间：2020.01.06 )</h3>
-</center>
+<h1>金百灵 iOS - v 1.0.0</h1>
+<h3>( 更新时间：2020.01.06 )</h3>
 <a style="text-align:center" href="itms-services://?action=download-manifest&url=https://github.com/lenovodns/jblios/raw/master/manifest.plist">
-    <h2>立即下载</h2>
+<h2>立即下载</h2>
 </a>
+<div id="dateTime">
+    <script language="javascript" type="text/javascript">
+        //分别获取年、月、日、时、分、秒
+        var myDate = new Date();
+        var year = myDate.getFullYear();
+        var month = myDate.getMonth() + 1;
+        var date = myDate.getDate();
+        var hours = myDate.getHours();
+        var minutes = myDate.getMinutes();
+        var seconds = myDate.getSeconds();
+
+        //月份时间的显示为两位数字
+        if (month < 10) {
+            month = "0" + month;
+        }
+        if (date < 10) {
+            date = "0" + date;
+        }
+        if (hours < 10) {
+            hours = "0" + hours;
+        }
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+    
+        //时间拼接
+        var dateTime = year + "-" + month + "-" + date + "  " + hours + ":" + minutes + ":" + seconds + "";
+        document.write(dateTime);//打印当前时间
+    </script>
+</div>
+</center>
 </body>
 </html>
